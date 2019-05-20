@@ -1,0 +1,6 @@
+
+…"squid:ClassVariableVisibilityCheck"PMake Type a static final constant or non-public and provide accessors if needed.(­î¢™8™™ü†­-
+Isquid:S1068"+Remove this unused "pointUp" private field.(ò°ã·8µ•…‡­-
+"squid:ClassVariableVisibilityCheck"SMake contest a static final constant or non-public and provide accessors if needed.(üÒÚøÿÿÿÿ8™™ü†­-
+Psquid:S1068"-Remove this unused "pointDown" private field.(·›ø‚úÿÿÿÿ8µ•…‡­-
+nsquid:S00116"ORename this field "Type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­î¢™8™™ü†­-

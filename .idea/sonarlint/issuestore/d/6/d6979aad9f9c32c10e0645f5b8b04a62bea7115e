@@ -1,0 +1,5 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(²ÄÓ«ýÿÿÿÿ
+gsquid:S2259"DA "NullPointerException" could be thrown; "result" is nullable here.(²ÄÓ«ýÿÿÿÿ8™„¥¤¬-
+Asquid:S1172"*Remove this unused method parameter "ast".(óÿªó
