@@ -1,3 +1,5 @@
+# IDEA的project文件夹中取出来的，忘记设置.gitignore了，要使用的话clone下来删掉部分文件就行了。
+
 # Lambda Interpreter
 
 ## 语法规则
