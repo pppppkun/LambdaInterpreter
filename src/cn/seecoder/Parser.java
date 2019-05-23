@@ -40,7 +40,12 @@ public class Parser {
     }
 
     /**
+     *
      * Application ::= Application Atom| Atom
+     * P.S: We needn't take more care of whether Left Recursion will cause unstoppable Recursion, because in the atom(),
+     * We can return NULL that pass to a new Application, and in the create methon in Application, We will know that whether
+     * Application.right is NULL.
+     *
      */
 
     private Node application(){

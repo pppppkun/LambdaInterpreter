@@ -8,10 +8,9 @@ import java.util.regex.Pattern;
  *
  * 处理 token 的辅助方法：
  *
- * fitType(Token): 返回当前的token，检查是否符合Type
- * skip(Token): 和 fitType 一样, 但如果匹配的话会跳过
- * match(Token): 断言 fitType 方法返回 true 并 skip
- * token(Token): 断言 fitType 方法返回 true 并返回 token
+ * nextToken(): return This.Token
+ * takeToken(): return Token.value
+ * fitToken(String Type): if FIT andix++ else return false;
  *
  * @author P君
  *
@@ -32,7 +31,7 @@ public class Lexer{
 
     /**
      *
-     * nexToken: detect next String is what Type in Token.
+     * nextToken: detect next String is what Type in Token.
      *
      * @return token
      */
@@ -65,14 +64,6 @@ public class Lexer{
         else{
             return false;
         }
-    }
-
-    public boolean skip(String Type){
-        if(this.fitType(Type)){
-            this.nextToken();
-            return true;
-        }
-        else return false;
     }
 
     public String takeToken(){

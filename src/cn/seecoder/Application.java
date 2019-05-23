@@ -1,5 +1,11 @@
 package cn.seecoder;
 
+/**
+ *
+ * It's believed that every application must have two nodes, and right node maybe is null.
+ *
+ */
+
 public class Application extends Node{
 
     //Application ::= Application Atom| Atom

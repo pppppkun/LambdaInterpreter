@@ -1,3 +1,5 @@
 
-¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(îùóİüÿÿÿÿ8¤§‰‡­-
-†"squid:ClassVariableVisibilityCheck"RMake leaves a static final constant or non-public and provide accessors if needed.(¨ñí88Øª€‡­-
+…"squid:ClassVariableVisibilityCheck"PMake node a static final constant or non-public and provide accessors if needed.(Ù‚é÷8Á©Ÿ®-
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Á©Ÿ®-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(«õİæ8ÜÉ«Ÿ®-

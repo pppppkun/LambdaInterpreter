@@ -23,16 +23,21 @@ LCID: /[a-z][a-zA-Z]*/
 ### Lexer
 
 处理 token 的辅助方法：
-+ next(Token): 返回下一个 token 是否匹配 Token
-+ skip(Token): 和 next 一样, 但如果匹配的话会跳过
-+ match(Token): 断言 next 方法返回 true 并 skip
-+ token(Token): 断言 next 方法返回 true 并返回 token
++ 处理 token 的辅助方法:
++ nextToken(): return This.Token
++ takeToken(): return Token.value
++ fitToken(String Type): if FIT andix++ else return false
 
 ### 抽象语法树 AST
 ```
  抽象语法树 ( AST ) 。lambda 演算的 AST 非常简单，因为我们只有 3 种节点： Abstraction （抽象）， Application （应用）以及 Identifier （标识符）
-
+ 抽象语法树中定义了一个节点，因为parser中创造节点的时候会自动传入节点，相当于用构造方法给每个节点之间练了一条线。
 ```
+
+### Parser
+
+首先我们要知道，任何Abstraction, Application, Identifier都是节点，不难发现任何Abstraction的Body都是Node，任何Application的两侧都可以看成是Node.
+
 
 ### 求值
 首先，我们需要定义，什么是形式（terms）（从语法可以推断），什么是值（values）。

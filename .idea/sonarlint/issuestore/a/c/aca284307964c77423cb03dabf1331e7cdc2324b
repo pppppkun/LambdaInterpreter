@@ -1,15 +1,0 @@
-
-Csquid:S1068"%Remove this unused "Q" private field.(˜©¼â8£„á×­-
-nsquid:S1450"PRemove the "G" field and declare it as a local variable in the relevant methods.(÷¾×’8 –ŞØ­-
-Msquid:S1481$"*Remove this unused "param" local variable.(©²ƒıÿÿÿÿ8 –ŞØ­-
-Csquid:S1068"%Remove this unused "G" private field.(÷¾×’8 –ŞØ­-
-\squid:S1854'"9Remove this useless assignment to local variable "param".(İ®Ó¿ıÿÿÿÿ8 –ŞØ­-
-ksquid:S00116"LRename this field "Q" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜©¼â8Èû­×­-
-Bsquid:S1068"%Remove this unused "P" private field.(Èìıy8 –ŞØ­-
-ksquid:S00116"LRename this field "G" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷¾×’8ƒ¬µ×­-
-Zsquid:UnusedPrivateMethodA")Remove this unused private "atom" method.(ÎÕÉ™şÿÿÿÿ8¦ÇĞØ­-
-Lsquid:S1481%")Remove this unused "temp" local variable.(‚†óäùÿÿÿÿ8ÅÆØ­-
-jsquid:S00116"LRename this field "P" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èìıy8Èû­×­-
-V
-squid:S106-"9Replace this use of System.out or System.err by a logger.(ÿƒ®ë8ºÊ¸Ö­-
-[squid:S1854%"8Remove this useless assignment to local variable "temp".(‚†óäùÿÿÿÿ8ÅÆØ­-

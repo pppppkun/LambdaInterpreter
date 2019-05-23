@@ -21,3 +21,7 @@ I
 src/cn/seecoder/Leaf.java,c\3\c306b7a6121d8ea2ba2da854484791b4ae2d6df9
 I
 src/cn/seecoder/Term.java,a\4\a40197d6f55c2412f56124b9aead49d76dbcdc78
+E
+LambdaInterpreter.iml,4\8\48506298671367063da667fd2bef924e6741f0e9
+I
+src/cn/seecoder/Node.java,5\e\5e5c6bfc8f074cbc52a6755db6391e612b336de4
