@@ -21,7 +21,7 @@ public class Parser {
     }
 
     public AST parse(){
-        term();
+        ast.node = term();
         return ast;
     }
 
