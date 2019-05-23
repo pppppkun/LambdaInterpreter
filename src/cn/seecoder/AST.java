@@ -22,4 +22,8 @@ public class AST {
 
     public Node node;
 
+    public void print(){
+        System.out.print("YES");
+    }
+
 }

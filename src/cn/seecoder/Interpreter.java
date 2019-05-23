@@ -15,6 +15,6 @@ public class Interpreter {
         AST ast = parser.parse();
 //        AST result = Interpreter.eval(ast);
 //        System.out.println(result.toString());
-
+        ast.print();
     }
 }
