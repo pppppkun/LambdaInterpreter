@@ -13,9 +13,8 @@ public class Interpreter {
         Lexer lexer = new Lexer(source);
         Parser parser = new Parser(lexer);
         AST ast = parser.parse();
-        AST result = Interpreter.eval(ast);
-
-        System.out.println(result.toString());
+//        AST result = Interpreter.eval(ast);
+//        System.out.println(result.toString());
 
     }
 }

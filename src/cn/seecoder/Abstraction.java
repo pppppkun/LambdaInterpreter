@@ -1,13 +1,12 @@
 package cn.seecoder;
 
-public class Abstraction extends Leaf{
+public class Abstraction extends Node{
 
     private String param;
-    private String term;
 
-    public Abstraction(String a, String b){
+    public Abstraction(String a,Node b){
         param = a;
-        term = b;
+        right = b;
     }
 
 }

@@ -1,13 +1,24 @@
 package cn.seecoder;
 
-public class Application extends Leaf{
+public class Application extends Node{
 
-    private String left;
-    private String right;
+    //Application ::= Application Atom| Atom
 
-    public Application(String a,String b){
-        left = a;
-        right = b;
+    public Application(Node left,Node right){
+        this.left = left;
+        this.right = right;
     }
 
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
+    }
+
+    public Node getRight() {
+        return right;
+    }
 }

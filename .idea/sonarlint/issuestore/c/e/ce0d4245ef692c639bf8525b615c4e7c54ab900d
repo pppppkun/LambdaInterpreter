@@ -1,10 +1,8 @@
 
-usquid:S00117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÇâ±şÿÿÿÿ8ªÃ‰†­-
 Tsquid:S26968"6Make the enclosing method "static" or remove this set.(Í¶ªì8¾ò¬†­-
-usquid:S00117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»¾ãâùÿÿÿÿ8†æ±†­-
+usquid:S00117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÇâ±şÿÿÿÿ8ªÃ‰†­-
 Tsquid:S26964"6Make the enclosing method "static" or remove this set.(›…—ø8¾ò¬†­-
-Tsquid:S26962"6Make the enclosing method "static" or remove this set.(Í¶ªì8¾ò¬†­-
-Msquid:S00108I")Either remove or fill this block of code.(¥¼£ºşÿÿÿÿ8»»·†­-
-V
-squid:S106V"9Replace this use of System.out or System.err by a logger.(ÍÍ»¿8Å“•†­-
 usquid:S00117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Š„Ÿÿÿÿÿÿ8Óí‰†­-
+V
+squid:S106W"9Replace this use of System.out or System.err by a logger.(ÍÍ»¿8Å“•†­-
+Tsquid:S26962"6Make the enclosing method "static" or remove this set.(Í¶ªì8¾ò¬†­-

@@ -20,13 +20,6 @@ import java.util.List;
 
 public class AST {
 
-    public List<Leaf> leaves;
-
-    public void add(Leaf l){
-        leaves.add(l);
-    }
-
-    public void delete(Leaf l){
-    }
+    public Node node;
 
 }

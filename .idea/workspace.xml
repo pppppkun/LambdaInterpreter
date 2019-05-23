@@ -4,7 +4,38 @@
     <bookmark url="file://$PROJECT_DIR$/src/cn/seecoder/Token.java" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9690c882-f7db-4eb0-93d6-3c31ba41e2f3" name="Default Changelist" comment="" />
+    <list default="true" id="9690c882-f7db-4eb0-93d6-3c31ba41e2f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cn/seecoder/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/seecoder/Term.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/3165f406c7b0015d0598f2d68a0719d9fff8b7eb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/3165f406c7b0015d0598f2d68a0719d9fff8b7eb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3cea507b5e1dfc11e717a5c8e9779a3c0a969fd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3cea507b5e1dfc11e717a5c8e9779a3c0a969fd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/aca284307964c77423cb03dabf1331e7cdc2324b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/aca284307964c77423cb03dabf1331e7cdc2324b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c306b7a6121d8ea2ba2da854484791b4ae2d6df9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c306b7a6121d8ea2ba2da854484791b4ae2d6df9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c983ff0f2fa2e3c84408f67748918a8f1753d3d8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c983ff0f2fa2e3c84408f67748918a8f1753d3d8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce0d4245ef692c639bf8525b615c4e7c54ab900d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce0d4245ef692c639bf8525b615c4e7c54ab900d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6979aad9f9c32c10e0645f5b8b04a62bea7115e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6979aad9f9c32c10e0645f5b8b04a62bea7115e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8f1d7814189ad337d948d8eb036d67e549478d2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8f1d7814189ad337d948d8eb036d67e549478d2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/AST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/AST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Abstraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Abstraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Identifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Identifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Interpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Interpreter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Lexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LambdaInterpreter/cn/seecoder/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/AST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Abstraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Abstraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Leaf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/seecoder/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/seecoder/Token.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,35 +49,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Token.java">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+            <state relative-caret-position="153">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1464#1465#0" expanded="true" />
-                <element signature="e#1497#1498#0" expanded="true" />
-                <element signature="e#1527#1528#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Interpreter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Lexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Identifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#118#119#0" expanded="true" />
+                <element signature="e#143#144#0" expanded="true" />
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#203#204#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Lexer.java">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Abstraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Parser.java">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Token.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="1512">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
+                <element signature="e#1626#1627#0" expanded="true" />
+                <element signature="e#1656#1657#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,17 +135,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/seecoder/AST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="462">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Leaf.java">
+        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="42">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -81,15 +162,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Interpreter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -99,32 +171,39 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/seecoder/Interpreter.java" />
-        <option value="$PROJECT_DIR$/src/cn/seecoder/Application.java" />
         <option value="$PROJECT_DIR$/src/cn/seecoder/Leaf.java" />
-        <option value="$PROJECT_DIR$/src/cn/seecoder/Abstraction.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Token.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Term.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Interpreter.java" />
         <option value="$PROJECT_DIR$/src/cn/seecoder/AST.java" />
-        <option value="$PROJECT_DIR$/src/cn/seecoder/Identifier.java" />
         <option value="$PROJECT_DIR$/src/cn/seecoder/Lexer.java" />
         <option value="$PROJECT_DIR$/src/cn/seecoder/Parser.java" />
-        <option value="$PROJECT_DIR$/src/cn/seecoder/Token.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Identifier.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Node.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Application.java" />
+        <option value="$PROJECT_DIR$/src/cn/seecoder/Abstraction.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="152" />
-    <option name="y" value="109" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="270" />
+    <option name="y" value="58" />
     <option name="width" value="1440" />
-    <option name="height" value="903" />
+    <option name="height" value="904" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,21 +227,23 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Lexer">
+  <component name="RunManager" selected="Application.Interpreter">
     <configuration name="Interpreter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.seecoder.Interpreter" />
       <module name="LambdaInterpreter" />
@@ -205,8 +286,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lexer" />
         <item itemvalue="Application.Interpreter" />
+        <item itemvalue="Application.Lexer" />
       </list>
     </recent_temporary>
   </component>
@@ -227,16 +308,25 @@
       <workItem from="1558268669775" duration="12554000" />
       <workItem from="1558347501257" duration="1343000" />
       <workItem from="1558348922342" duration="204000" />
+      <workItem from="1558355266655" duration="319000" />
+      <workItem from="1558355902225" duration="9000" />
+      <workItem from="1558367061415" duration="985000" />
+      <workItem from="1558368077531" duration="231000" />
+      <workItem from="1558442458306" duration="11281000" />
+      <workItem from="1558453768958" duration="145000" />
+      <workItem from="1558525372683" duration="240000" />
+      <workItem from="1558599136501" duration="1817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22651000" />
+    <option name="totallyTimeSpent" value="37678000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1040" extended-state="6" />
+    <frame x="270" y="58" width="1440" height="904" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11673774" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17463768" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -245,8 +335,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21940464" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2593819" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39845476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -352,42 +442,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Abstraction.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Term.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Identifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
           <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/AST.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Token.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Leaf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        <state relative-caret-position="1512">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -401,38 +476,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Interpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Leaf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/AST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Identifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#118#119#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seecoder/Abstraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

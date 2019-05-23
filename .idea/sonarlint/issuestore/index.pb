@@ -19,3 +19,5 @@ P
  src/cn/seecoder/Application.java,3\1\3165f406c7b0015d0598f2d68a0719d9fff8b7eb
 I
 src/cn/seecoder/Leaf.java,c\3\c306b7a6121d8ea2ba2da854484791b4ae2d6df9
+I
+src/cn/seecoder/Term.java,a\4\a40197d6f55c2412f56124b9aead49d76dbcdc78

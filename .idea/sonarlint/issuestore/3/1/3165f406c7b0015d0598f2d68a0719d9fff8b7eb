@@ -1,3 +1,4 @@
 
-Ksquid:S1068"(Remove this unused "left" private field.(ø±©Áøÿÿÿÿ8ıü¦­-
-Lsquid:S1068")Remove this unused "right" private field.(†•Íøÿÿÿÿ8ıü¦­-
+psquid:S00117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô¤Éğ8÷åÖ­-
+Lsquid:S1068")Remove this unused "right" private field.(ş•·æüÿÿÿÿ8€˜¹Ø­-
+Esquid:S1068"(Remove this unused "left" private field.(ŞÆÁ88€˜¹Ø­-

@@ -22,38 +22,41 @@ public class Token {
     private String type = "";
     private String myValue = "";
     private static final String patternString = "[a-z]";
+    public enum Type{
+        DOT,
+        LPAREN,
+        RPAREN,
+        LAMBDA,
+        LCID;
 
+    }
     //通过键值对查找
 
     public Token(){
-        types.put('.',"DOT");
-        types.put('(',"LPAREN");
-        types.put(')',"RPAREN");
-        types.put('\\',"LAMBDA");
+        types.put('.',Type.DOT.toString());
+        types.put('(',Type.LPAREN.toString());
+        types.put(')',Type.RPAREN.toString());
+        types.put('\\',Type.LAMBDA.toString());
     }
 
     //设置Type
 
     public void setType(char s){
-        for(char p : types.keySet()){
-            if(p==s){
-                myValue = String.valueOf(s);
-                type = types.get(s);
-                return;
-            }
+        if(types.containsKey(s)){
+            type = types.get(s);
+            myValue = String.valueOf(s);
+            return;
         }
         setLCID(String.valueOf(s));
     }
-
     //判断LCID是一个单词的情况
 
     private void setLCID(String s){
-
         type = "";
         Pattern pattern = Pattern.compile(patternString);
         Matcher matcher = pattern.matcher(s);
         if(matcher.matches()){
-            type = "LCID";
+            type = Type.LCID.toString();
             myValue = s;
         }
         else{
@@ -64,7 +67,7 @@ public class Token {
     //直接设置value
     public void setMyValue(String s){
         myValue = s;
-        type = "LCID";
+        type = Type.LCID.toString();
     }
 
     public String getType(){

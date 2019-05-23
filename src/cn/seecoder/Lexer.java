@@ -58,7 +58,13 @@ public class Lexer{
     }
 
     public boolean fitType(String Type){
-        return token.getType().equals(Type);
+        if(token.getType().equals(Type)){
+            index++;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public boolean skip(String Type){
@@ -69,11 +75,12 @@ public class Lexer{
         else return false;
     }
 
-    public void match(String Type){
-        if(this.fitType(Type)){
-
-        }
+    public String takeToken(){
+        String value = token.getMyValue();
+        this.nextToken();
+        return value;
     }
+
 
     /**
      * translate: Use this method will translate Lambda expression to Token's Type. This method will detect the

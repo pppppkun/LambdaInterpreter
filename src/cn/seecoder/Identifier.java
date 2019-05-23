@@ -1,10 +1,14 @@
 package cn.seecoder;
 
-public class Identifier extends Leaf{
+public class Identifier extends Node{
 
-    private String value;
+
+
     public Identifier(String a){
         value = a;
     }
 
+    public String getValue() {
+        return value;
+    }
 }
