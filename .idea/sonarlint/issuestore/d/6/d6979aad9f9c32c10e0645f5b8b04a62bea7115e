@@ -1,4 +1,3 @@
 
-Asquid:S1172"*Remove this unused method parameter "ast".(óÿªó
-Isquid:S1481"+Remove this unused "result" local variable.(°Ùœø8¡Ô÷Ÿ®-
-Xsquid:S1854":Remove this useless assignment to local variable "result".(°Ùœø8¡Ô÷Ÿ®-
+hsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(‡ƒÅ^8ûÛ»Õ®-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(û˜äîüÿÿÿÿ8Ø“ºÕ®-

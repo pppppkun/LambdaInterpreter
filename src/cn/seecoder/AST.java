@@ -20,10 +20,20 @@ import java.util.List;
 
 public class AST {
 
-    public Node node;
+    protected AST left;
+    protected AST right;
+    protected String value;
 
     public void print(){
         System.out.print("YES");
+    }
+
+    public AST getLeft() {
+        return left;
+    }
+
+    public AST getRight(){
+        return right;
     }
 
 }

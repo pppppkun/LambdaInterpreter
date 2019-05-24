@@ -19,14 +19,16 @@ public class Lexer{
 
     private static final String DEFAULT = "LCID";
     private static final String PATTERNSTRING = "[a-z][a-zA-Z]*";
+    private String LCID = "";
     private String source;
     private char[] sources;
-    private static int index = 0;
+    private static int index = 1;
     private Token token = new Token();
 
     public Lexer(String s){
         source = s;
         sources = source.toCharArray();
+        token.setType(sources[0]);
     }
 
     /**
@@ -37,6 +39,7 @@ public class Lexer{
      */
 
     public Token nextToken(){
+        if(index==sources.length) return null;
         Pattern pattern = Pattern.compile(PATTERNSTRING);
         Matcher matcher;
         char value = sources[index];
@@ -51,6 +54,7 @@ public class Lexer{
             index=index-2;
             temp.deleteCharAt(temp.length()-1);
             token.setMyValue(temp.toString());
+            LCID = temp.toString();
         }
         index++;
         return token;
@@ -58,7 +62,7 @@ public class Lexer{
 
     public boolean fitType(String Type){
         if(token.getType().equals(Type)){
-            index++;
+            nextToken();
             return true;
         }
         else{
@@ -72,6 +76,9 @@ public class Lexer{
         return value;
     }
 
+    public String returnLCID(){
+        return LCID;
+    }
 
     /**
      * translate: Use this method will translate Lambda expression to Token's Type. This method will detect the

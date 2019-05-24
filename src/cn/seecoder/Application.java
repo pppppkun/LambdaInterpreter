@@ -6,25 +6,25 @@ package cn.seecoder;
  *
  */
 
-public class Application extends Node{
+public class Application extends AST{
 
     //Application ::= Application Atom| Atom
 
-    public Application(Node left,Node right){
+    public Application(AST left,AST right){
         this.left = left;
         this.right = right;
     }
 
+    public Application(){
+        ;
+    }
 
-    public void setLeft(Node left) {
+
+    public void setLeft(AST left) {
         this.left = left;
     }
 
-    public void setRight(Node right) {
+    public void setRight(AST right) {
         this.right = right;
-    }
-
-    public Node getRight() {
-        return right;
     }
 }

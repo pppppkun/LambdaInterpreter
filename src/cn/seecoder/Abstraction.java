@@ -1,10 +1,10 @@
 package cn.seecoder;
 
-public class Abstraction extends Node{
+public class Abstraction extends AST{
 
     private String param;
 
-    public Abstraction(String a,Node body){
+    public Abstraction(String a,AST body){
         param = a;
         right = body;
     }

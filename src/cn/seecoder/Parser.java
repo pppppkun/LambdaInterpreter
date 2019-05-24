@@ -2,11 +2,11 @@ package cn.seecoder;
 
 /**
  *
- * Term ::= Application| LAMBDA LCID DOT Term
+ * term ::= Application| LAMBDA LCID DOT term
  *
  * Application ::= Application Atom| Atom
  *
- * Atom ::= LPAREN Term RPAREN| LCID
+ * Atom ::= LPAREN term RPAREN| LCID
  *
  * @author P君
  *
@@ -21,14 +21,14 @@ public class Parser {
     }
 
     public AST parse(){
-        ast.node = term();
+        ast = term();
         return ast;
     }
 
     /**
-     * Term ::= Application| LAMBDA LCID DOT Term
+     * term ::= Application| LAMBDA LCID DOT term
      */
-    private Node term(){
+    private AST term(){
         if(lexer.fitType(Token.Type.LAMBDA.toString())){
             String param = lexer.takeToken();
             lexer.takeToken();
@@ -44,23 +44,37 @@ public class Parser {
      * Application ::= Application Atom| Atom
      * P.S: We needn't take more care of whether Left Recursion will cause unstoppable Recursion, because in the atom(),
      * We can return NULL that pass to a new Application, and in the create methon in Application, We will know that whether
-     * Application.right is NULL.
+     * Application.right is NULL. And we if right isn't null, we will do this:
+     *
+     *                  this.Left <= new Application(this.Left,this.right)
+     *                  this.right = atom();
+     *
+     *              This is a powerful way to pass all lexer.
      *
      */
 
-    private Node application(){
-        return new Application(atom(),atom());
+    private AST application(){
+        Application application = new Application();
+        application.setLeft(atom());
+        application.setRight(atom());
+        while (true){
+            if(application.getRight()==null) return application.getLeft();
+            else{
+                application.setLeft(new Application(application.getLeft(),application.getRight()));
+                application.setRight(atom());
+            }
+        }
     }
 
     /**
-     * Atom ::= LPAREN Term RPAREN| LCID
+     * Atom ::= LPAREN term RPAREN| LCID
      */
 
-    private Node atom(){
+    private AST atom(){
         if(lexer.fitType(Token.Type.LPAREN.toString())){
             return term();
         }else if(lexer.fitType(Token.Type.LCID.toString())){
-            return new Identifier(lexer.takeToken());
+            return new Identifier(lexer.returnLCID());
         }
         else if(lexer.fitType(Token.Type.RPAREN.toString())){
             return null;
