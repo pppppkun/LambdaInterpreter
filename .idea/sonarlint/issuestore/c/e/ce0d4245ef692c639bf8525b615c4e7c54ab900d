@@ -1,8 +1,0 @@
-
-Tsquid:S26964"6Make the enclosing method "static" or remove this set.(Í¶ªì8¾ò¬†­-
-Tsquid:S2696;"6Make the enclosing method "static" or remove this set.(Í¶ªì8¾ò¬†­-
-usquid:S00117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÇâ±þÿÿÿÿ8ªÃ‰†­-
-V
-squid:S106["9Replace this use of System.out or System.err by a logger.(ÍÍ»¿8Å“•†­-
-Tsquid:S26966"6Make the enclosing method "static" or remove this set.(›…—ø8¾ò¬†­-
-ssquid:S00116"ORename this field "LCID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÐæüùÿÿÿÿ8¨¯‚Ö®-

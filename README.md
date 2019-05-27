@@ -22,21 +22,44 @@ LCID: /[a-z][a-zA-Z]*/
 ```
 ### Lexer
 
-处理 token 的辅助方法：
-+ 处理 token 的辅助方法:
-+ nextToken(): return This.Token
-+ takeToken(): return Token.value
-+ fitToken(String Type): if FIT andix++ else return false
+处理 token 的辅助方法：(可以自行定义)
++ next(Token): 返回下一个 token 是否匹配 Token
++ skip(Token): 和 next 一样, 但如果匹配的话会跳过
++ match(Token): 断言 next 方法返回 true 并 skip
++ token(Token): 断言 next 方法返回 true 并返回 token
+
+Lexer向控制台输出每次检测到的Token类型+换行。
 
 ### 抽象语法树 AST
 ```
  抽象语法树 ( AST ) 。lambda 演算的 AST 非常简单，因为我们只有 3 种节点： Abstraction （抽象）， Application （应用）以及 Identifier （标识符）
- 抽象语法树中定义了一个节点，因为parser中创造节点的时候会自动传入节点，相当于用构造方法给每个节点之间练了一条线。
+Abstraction 
+    Identifier param;//变量
+    AST body;//表达式
+toString显示为：
+\.body.toString()
+
+Application
+    AST lhs;左树
+    AST rhs;右树
+toString显示为：
+(lhs.toString()空格rhs.toString()
+
+Indentifier
+    String value；//De Bruijn index
+toString显示为：
+value
+
+```
+### De Bruijn index
+```aidl
+(\x.\y.x \f.\g.g)
+首先转化为：（变量保持不变，数字从0开始代码同层变量，1代表上一层次变量。）
+(\x.\y.1 \f.\g.0)
+toString显示为：（为了防止alpha变换造成的不一致，去掉变量）
+(\.\.1 \.\.0)
 ```
 
-### Parser
-
-首先我们要知道，任何Abstraction, Application, Identifier都是节点，不难发现任何Abstraction的Body都是Node，任何Application的两侧都可以看成是Node.
 
 
 ### 求值
@@ -97,7 +120,72 @@ public static void main(String[] args) {
         AST ast = parser.parse();
         AST result = Interpreter.eval(ast);
 
-        System.out.println(result.toString());
 
 }
+```
+### Test
+```aidl
+
+    @Test
+    public void testLexer() {
+        Lexer lexer = new Lexer(sources[1]);
+        Parser parser = new Parser(lexer);
+        AST ast = parser.parse();
+
+        assertEquals("LPAREN" + lineBreak+
+                "LPAREN" + lineBreak+
+                "LAMBDA" + lineBreak+
+                "LCID" + lineBreak+
+                "DOT" + lineBreak+
+                "LAMBDA" + lineBreak+
+                "LCID" + lineBreak+
+                "DOT" + lineBreak+
+                "LAMBDA" + lineBreak+
+                "LCID" + lineBreak+
+                "DOT" + lineBreak+
+                "LCID" + lineBreak+
+                "LPAREN" + lineBreak+
+                "LCID" + lineBreak+
+                "LCID" + lineBreak+
+                "LCID" + lineBreak+
+                "RPAREN" + lineBreak+
+                "RPAREN" + lineBreak+
+                "LPAREN" + lineBreak+
+                "LAMBDA" + lineBreak+
+                "LCID" + lineBreak+
+                "DOT" + lineBreak+
+                "LAMBDA" + lineBreak+
+                "LCID" + lineBreak+
+                "DOT" + lineBreak+
+                "LCID" + lineBreak+
+                "RPAREN" + lineBreak+
+                "RPAREN"+lineBreak+
+                "EOF"+lineBreak,bytes.toString());
+
+    }
+
+    @Test
+    public void testParser() {
+        Lexer lexer = new Lexer(sources[1]);
+        Parser parser = new Parser(lexer);
+        AST ast = parser.parse();
+        assertEquals("(\\.\\.\\.(1 ((2 1) 0)) \\.\\.0)",ast.toString());
+
+
+    }
+
+    @Test
+    public void testInterpreter() {
+        Lexer lexer = new Lexer(sources[1]);
+        Parser parser = new Parser(lexer);
+        interpreter = new Interpreter(parser);
+
+        AST ast = parser.parse();
+
+        AST result = interpreter.eval(ast);
+
+        assertEquals("\\.\\.(1 0)",result.toString());
+
+
+    }
 ```
