@@ -35,6 +35,7 @@ public class Parser {
             ctx.add(Sparam);
             AST body = term(ctx);
             Identifier param = new Identifier(Sparam, String.valueOf(ctx.indexOf(Sparam)));
+            ctx.remove(Sparam);
             return new Abstraction(param,body);
         }
         else{
@@ -81,11 +82,15 @@ public class Parser {
         else if(lexer.match(TokenType.RPAREN)){
             return null;
         }
-        return null;
+        else if(lexer.match(TokenType.EOF)){
+            lexer.match(TokenType.EOF);
+            return atom(ctx);
+        }
+        else return null;
     }
 
     public static void main(String[] args){
-        Lexer lexer = new Lexer("(\\x.\\y.x)(\\x.x)(\\y.y)");
+        Lexer lexer = new Lexer("(\\x.\\y.(x y)x)(\\x.x)(\\y.y)");
         Parser parser = new Parser(lexer);
         AST ast = parser.parse();
         System.out.println(ast.toString());

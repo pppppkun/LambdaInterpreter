@@ -20,6 +20,7 @@ public class Lexer{
         types.put('(',TokenType.LPAREN);
         types.put(')',TokenType.RPAREN);
         types.put('\\',TokenType.LAMBDA);
+        types.put(' ',TokenType.EOF);
     };
     public Lexer(String s){
         index = 0;
