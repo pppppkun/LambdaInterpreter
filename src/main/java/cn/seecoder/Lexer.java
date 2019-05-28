@@ -13,7 +13,7 @@ public class Lexer {
     private char[] sources;
     private static final String PATTERNSTRING = "[a-z][a-zA-Z]*";
     private String LCID = "";
-
+    private boolean flag = true;
 
     private static final HashMap<Character, TokenType> types = new HashMap<>();
 
@@ -22,7 +22,6 @@ public class Lexer {
         types.put('(', TokenType.LPAREN);
         types.put(')', TokenType.RPAREN);
         types.put('\\', TokenType.LAMBDA);
-        types.put(' ', TokenType.EOF);
     }
 
     public Lexer(String s) {
@@ -59,7 +58,12 @@ public class Lexer {
 
     //get next token
     private TokenType nextToken() {
-        if (index == sources.length) return null;
+        if (index == sources.length&&flag){
+            flag = false;
+            System.out.println(TokenType.EOF);
+            return TokenType.EOF;
+        }
+        else if(flag==false) return null;
         Pattern pattern = Pattern.compile(PATTERNSTRING);
         Matcher matcher;
         char value = sources[index];
@@ -77,9 +81,10 @@ public class Lexer {
             LCID = temp.toString();
         }
         index++;
+        if(token != null) System.out.println(token);
         return token;
     }
-
+    //\.\.\.(((2 \.\.(0 ((1 3) 3))) \.1) \.0)
     //check token == t
     public boolean next(TokenType t) {
         if (token == t) return true;
@@ -108,14 +113,13 @@ public class Lexer {
     private void translate() {
         while (index < sources.length) {
             nextToken();
-            if (!next(null)) System.out.println(token.toString());
         }
         System.out.println("EOF");
     }
 
     public static void main(String[] args) {
-        Lexer lexer = new Lexer("(\\x.\\y.xy)(\\x.x)(\\y.y)");
+        Lexer lexer = new Lexer("((\\n.\\f.\\x.f (n f x))(\\f.\\x.x))");
         lexer.translate();
     }
-
+//((\n.\f.\x.f (n f x))(\f.\x.x))
 }

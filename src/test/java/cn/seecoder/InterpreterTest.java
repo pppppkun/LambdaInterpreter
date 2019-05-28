@@ -117,7 +117,7 @@ public class InterpreterTest {
     public void tearDown() {
         System.setOut(console);
     }
-
+    //PASS
     @Test
     public void test0_ZERO_testLexer() {
         testLexer(0);
@@ -133,19 +133,19 @@ public class InterpreterTest {
                         "RPAREN" + lineBreak +
                         "EOF" + lineBreak, bytes.toString());
     }
-
+    //PASS
     @Test
     public void test0_ZERO_testParser() {
         AST ast = testParser(0);
         assertEquals("\\.\\.0", ast.toString());
     }
-
+    //PASS
     @Test
     public void test0_ZERO_testInterpreter() {
         AST result = testInterpreter(0);
         assertEquals("\\.\\.0", result.toString());
     }
-
+    //PASS
     @Test
     public void test1_SUCC_testLexer() {
         testLexer(1);
@@ -179,7 +179,7 @@ public class InterpreterTest {
                 "RPAREN" + lineBreak +
                 "EOF" + lineBreak, bytes.toString());
     }
-
+    //PASS
     @Test
     public void test1_SUCC_testParser() {
         AST ast = testParser(1);
@@ -191,7 +191,7 @@ public class InterpreterTest {
         AST result = testInterpreter(1);
         assertEquals("\\.\\.(1 0)", result.toString());
     }
-
+    //PASS
     @Test
     public void test2_SUCC_testLexer() {
         testLexer(2);

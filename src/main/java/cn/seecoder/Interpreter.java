@@ -71,6 +71,12 @@ public class Interpreter {
     private AST subst(AST node, AST value, int depth) {
 
         if(isApplication(node)){
+            
+        }
+        else if(isAbstraction(node)){
+
+        }
+        else{
 
         }
 
@@ -197,6 +203,8 @@ public class Interpreter {
             Lexer lexer = new Lexer(source);
 
             Parser parser = new Parser(lexer);
+
+            System.out.println(parser.parse().toString());
 
             Interpreter interpreter = new Interpreter(parser);
 
