@@ -1,9 +1,10 @@
 package cn.seecoder;
+
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Lexer{
+public class Lexer {
 
     public String source;
     public int index;
@@ -14,63 +15,64 @@ public class Lexer{
     private String LCID = "";
 
 
-    private static final HashMap<Character,TokenType> types = new HashMap<>();
+    private static final HashMap<Character, TokenType> types = new HashMap<>();
+
     static {
-        types.put('.',TokenType.DOT);
-        types.put('(',TokenType.LPAREN);
-        types.put(')',TokenType.RPAREN);
-        types.put('\\',TokenType.LAMBDA);
-        types.put(' ',TokenType.EOF);
-    };
-    public Lexer(String s){
+        types.put('.', TokenType.DOT);
+        types.put('(', TokenType.LPAREN);
+        types.put(')', TokenType.RPAREN);
+        types.put('\\', TokenType.LAMBDA);
+        types.put(' ', TokenType.EOF);
+    }
+
+    public Lexer(String s) {
         index = 0;
         source = s;
         sources = source.toCharArray();
         nextToken();
     }
 
-    public void setType(char s){
-        if(types.containsKey(s)){
+    public void setType(char s) {
+        if (types.containsKey(s)) {
             token = types.get(s);
             return;
         }
         setLCID(String.valueOf(s));
     }
 
-    private void setLCID(String s){
+    private void setLCID(String s) {
         token = null;
         Pattern pattern = Pattern.compile(PATTERNSTRING);
         Matcher matcher = pattern.matcher(s);
-        if(matcher.matches()){
+        if (matcher.matches()) {
             token = TokenType.LCID;
             tokenvalue = s;
-        }
-        else{
+        } else {
             tokenvalue = "";
         }
     }
 
-    public void setMyValue(String s){
+    public void setMyValue(String s) {
         tokenvalue = s;
         token = TokenType.LCID;
     }
 
     //get next token
-    private TokenType nextToken(){
-        if(index==sources.length) return null;
+    private TokenType nextToken() {
+        if (index == sources.length) return null;
         Pattern pattern = Pattern.compile(PATTERNSTRING);
         Matcher matcher;
         char value = sources[index];
         StringBuilder temp = new StringBuilder();
         setType(value);
-        if(token==TokenType.LCID){
-            do{
+        if (token == TokenType.LCID) {
+            do {
                 temp.append(sources[index]);
                 matcher = pattern.matcher(temp);
                 index++;
-            }while(matcher.matches());
-            index=index-2;
-            temp.deleteCharAt(temp.length()-1);
+            } while (matcher.matches());
+            index = index - 2;
+            temp.deleteCharAt(temp.length() - 1);
             setMyValue(temp.toString());
             LCID = temp.toString();
         }
@@ -79,41 +81,39 @@ public class Lexer{
     }
 
     //check token == t
-    public boolean next(TokenType t){
-        if(token==t) return true;
+    public boolean next(TokenType t) {
+        if (token == t) return true;
         else return false;
     }
 
     //assert matching the token type, and move next token
-    public boolean match(TokenType t){
-        if(token==t){
+    public boolean match(TokenType t) {
+        if (token == t) {
             nextToken();
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     //skip token  and move next token
-    public boolean skip(TokenType t){
-        if(token == t){
+    public boolean skip(TokenType t) {
+        if (token == t) {
             nextToken();
             return true;
-        }
-        else{
+        } else {
             nextToken();
             return false;
         }
     }
-
-    private void translate(){
-        while(index<sources.length){
+    // lexer's toString.
+    private void translate() {
+        while (index < sources.length) {
             nextToken();
-            if(!next(null)) System.out.println(token.toString());
+            if (!next(null)) System.out.println(token.toString());
         }
         System.out.println("EOF");
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Lexer lexer = new Lexer("(\\x.\\y.xy)(\\x.x)(\\y.y)");
         lexer.translate();
     }
