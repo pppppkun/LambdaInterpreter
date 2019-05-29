@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Parser {
     Lexer lexer;
 
+
     public Parser(Lexer l) {
         lexer = l;
     }
@@ -27,14 +28,14 @@ public class Parser {
 
     private AST term(ArrayList<String> ctx) {
         if (lexer.match(TokenType.LAMBDA)) {
-            String Sparam = lexer.tokenvalue;
+            String param = lexer.tokenvalue;
             lexer.skip(TokenType.LCID);
             lexer.match(TokenType.DOT);
-            ctx.add(Sparam);
+            ctx.add(0,param);
+            String paramValue = ""+ctx.indexOf(param);
             AST body = term(ctx);
-            Identifier param = new Identifier(Sparam, String.valueOf(ctx.size()-ctx.indexOf(Sparam)));
-            ctx.remove(Sparam);
-            return new Abstraction(param, body);
+            ctx.remove(ctx.indexOf(param));
+            return new Abstraction(new Identifier(param, paramValue),body);
         } else {
             return application(ctx);
         }
@@ -71,7 +72,7 @@ public class Parser {
         } else if (lexer.next(TokenType.LCID)) {
             String tvalue = lexer.tokenvalue;
             lexer.skip(TokenType.LCID);
-            return new Identifier(tvalue, String.valueOf(ctx.size()-1-ctx.indexOf(tvalue)));
+            return new Identifier(tvalue, String.valueOf(ctx.indexOf(tvalue)));
         } else if (lexer.match(TokenType.RPAREN)) {
             return null;
         } else if (lexer.match(null)) {
@@ -83,8 +84,8 @@ public class Parser {
     public static void main(String[] args) {
 //        Lexer lexer = new Lexer("(\\x.\\y.(x y)x)(\\x.x)(\\y.y)");
 //        Lexer lexer = new Lexer("(\\n.\\f.\\x.n(\\g.\\h.h(g f))(\\u.x)(\\u.u))");
-//        Lexer lexer = new Lexer("(\\x.\\y.(x y))");
-        Lexer lexer = new Lexer("((\\n.\\f.\\x.f (n f x))(\\f.\\x.x))");
+        Lexer lexer = new Lexer("(\\x.\\y.(x y))");
+//        Lexer lexer = new Lexer("((\\n.\\f.\\x.f (n f x))(\\f.\\x.x))");
         Parser parser = new Parser(lexer);
         AST ast = parser.parse();
         System.out.println(ast.toString());

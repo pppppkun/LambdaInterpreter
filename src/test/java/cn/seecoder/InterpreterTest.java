@@ -257,7 +257,7 @@ public class InterpreterTest {
         AST result = testInterpreter(2);
         assertEquals("\\.\\.(1 (1 0))", result.toString());
     }
-
+    //PASS
     @Test
     public void test3_SUCC_testLexer() {
         testLexer(3);

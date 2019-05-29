@@ -16,6 +16,26 @@ public class Identifier extends AST {
         return Integer.valueOf(value);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public void setDBindex(int DBindex) {
+        this.DBindex = DBindex;
+    }
+
     public String toString(){
         return value;
     }

@@ -71,17 +71,15 @@ public class Interpreter {
     private AST subst(AST node, AST value, int depth) {
 
         if(isApplication(node)){
-            
+            return new Application(subst(((Application) node).getLhs(),value,depth),subst(((Application) node).getRhs(),value,depth));
         }
         else if(isAbstraction(node)){
-
+            return new Abstraction(((Abstraction) node).param,subst(((Abstraction) node).body,value,depth+1));
         }
         else{
-
+            if(depth==((Identifier)node).getDBindex()) return shift(depth,value,0);
+            else return new Identifier(((Identifier) node).getName(),((Identifier) node).getValue());
         }
-
-        return null;
-
     }
 
     /**
@@ -110,13 +108,12 @@ public class Interpreter {
             //param 2 = shift(by,node.body,from+1)
             return new Abstraction(((Abstraction) node).param,shift(by,((Abstraction) node).body,from+1));
         }
-        else if(isIdentifier(node)){
+        else{
             //param 1 = node.name
             //param 2 = String.valueOf(node.getDBindex()+node.getDEindex()>= from ? by:0)
             //我是一个伪文艺的Java8青年!
             return new Identifier(((Identifier) node).name, String.valueOf(((Identifier) node).getDBindex() + (((Identifier) node).getDBindex() >= from ? by : 0)));
         }
-        return null;
     }
 
     static String ZERO = "(\\f.\\x.x)";
@@ -203,8 +200,6 @@ public class Interpreter {
             Lexer lexer = new Lexer(source);
 
             Parser parser = new Parser(lexer);
-
-            System.out.println(parser.parse().toString());
 
             Interpreter interpreter = new Interpreter(parser);
 
