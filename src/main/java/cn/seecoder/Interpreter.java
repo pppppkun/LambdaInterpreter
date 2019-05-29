@@ -31,17 +31,31 @@ public class Interpreter {
     private AST evalAST(AST ast) {
         while(true){
             if(ast instanceof Application){
-                if(isAbstraction(((Application) ast).getLhs())&&isAbstraction(((Application) ast).getRhs())){
+                if(isAbstraction(((Application) ast).getLhs())){
                     ast = substitute(((Abstraction)((Application) ast).getLhs()).body,((Application) ast).getRhs());
                 }
-                else if(isAbstraction(((Application) ast).getLhs())){
-                    ((Application) ast).setRhs(evalAST(((Application) ast).getRhs()));
-                }
-                else{
+                else if(isApplication(((Application) ast).getLhs())&&!isIdentifier(((Application) ast).getRhs())){
                     ((Application) ast).setLhs(evalAST(((Application) ast).getLhs()));
+                    ((Application) ast).setRhs(evalAST(((Application) ast).getRhs()));
+                    if(isAbstraction(((Application) ast).getLhs())) ast = evalAST(ast);
+                    return ast;
+                }
+                else if(isApplication(((Application) ast).getLhs())&&isIdentifier(((Application) ast).getRhs())){
+                    ((Application) ast).setLhs(evalAST(((Application) ast).getLhs()));
+                    if(isAbstraction(((Application) ast).getLhs())) ast = evalAST(ast);
+                    return ast;
+                }
+                //(isIdentifier(((Application) ast).getLhs())
+                else{
+                    ((Application) ast).setRhs(evalAST(((Application) ast).getRhs()));
+                    return ast;
                 }
             }
             else if(isAbstraction(ast)){
+                ((Abstraction) ast).body = evalAST(((Abstraction) ast).body);
+                return ast;
+            }
+            else{
                 return ast;
             }
         }
@@ -78,7 +92,7 @@ public class Interpreter {
         }
         else{
             if(depth==((Identifier)node).getDBindex()) return shift(depth,value,0);
-            else return new Identifier(((Identifier) node).getName(),((Identifier) node).getValue());
+            else return node;
         }
     }
 
