@@ -102,11 +102,12 @@ value 是最终的形式，也就是说，它们不能再被求值了。在这�
 规则：
 
 + 首先检测其是否为 application，如果是，则对其求值：
-	- 若 abstraction 的两侧都是值，只要将所有出现的 x 用给出的值替换掉； (3)
-	- 否则，若左侧为值，给右侧求值；(2)
-	- 如果上面都不行，只对左侧求值；(1)
-+ 现在，如果下一个节点是 identifier，我们只需将它替换为它所表示的变量绑定的值。
-+ 最后，如果没有规则适用于AST，这意味着它已经是一个 value，我们将它返回。
+	- 如果左侧是abstraction,那么对两侧求值并且将右侧替换进左侧（1）
+	- 如果左侧是application,考虑右侧。如果右侧是identifier,则右侧无法求值，对左侧求值，如果求值完后是abstraction，则对整个ast继续求值。如果求值完后不是abstraction，那么必然不是application，因为方法不会返回application，所以可以直接输出这棵树。
+		如果右侧不是identifier，则对两侧求值，其余同上。
+	- 如果左侧是identifier，这就不是一个符合输入要求的lambda表达式，返回ast并且输出错误。
++ 如果是abstraction，则对其的body进行求值
++ 如果是一个identifier，则直接返回。
 
 ### Main方法
 
