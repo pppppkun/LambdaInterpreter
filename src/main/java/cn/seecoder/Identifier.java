@@ -39,4 +39,7 @@ public class Identifier extends AST {
     public String toString(){
         return value;
     }
+    public String totree(){
+        return "["+name+"]";
+    }
 }

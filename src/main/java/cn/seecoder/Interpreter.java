@@ -2,7 +2,7 @@ package cn.seecoder;
 
 public class Interpreter {
     Parser parser;
-    AST astAfterParser;
+    public AST astAfterParser;
 
     public Interpreter(Parser p) {
         parser = p;
@@ -11,15 +11,15 @@ public class Interpreter {
     }
 
 
-    private boolean isAbstraction(AST ast) {
+    private final boolean isAbstraction(AST ast) {
         return ast instanceof Abstraction;
     }
 
-    private boolean isApplication(AST ast) {
+    private final boolean isApplication(AST ast) {
         return ast instanceof Application;
     }
 
-    private boolean isIdentifier(AST ast) {
+    private final boolean isIdentifier(AST ast) {
         return ast instanceof Identifier;
     }
 
@@ -83,7 +83,6 @@ public class Interpreter {
      * @throws  (方法有异常的话加)
      */
     private AST subst(AST node, AST value, int depth) {
-
         if(isApplication(node)){
             return new Application(subst(((Application) node).getLhs(),value,depth),subst(((Application) node).getRhs(),value,depth));
         }
@@ -225,3 +224,5 @@ public class Interpreter {
 
     }
 }
+//[[[n][[f][[x][fnfx]]]][[f][[x][x]]]]
+//((n\f.\x.f (n f x))(\f.\x.x))

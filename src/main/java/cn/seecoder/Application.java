@@ -32,4 +32,9 @@ public class Application extends AST{
     public String toString(){
         return "("+lhs.toString()+" "+rhs.toString()+")";
     }
+
+    public String totree(){
+        return "["+lhs.totree()+"]["+rhs.totree()+"]";
+    }
+
 }

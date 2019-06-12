@@ -31,7 +31,7 @@ public class Lexer {
         nextToken();
     }
 
-    public void setType(char s) {
+    private void setType(char s) {
         if (types.containsKey(s)) {
             token = types.get(s);
             return;
@@ -84,7 +84,7 @@ public class Lexer {
         if(token != null) System.out.println(token);
         return token;
     }
-    //\.\.\.(((2 \.\.(0 ((1 3) 3))) \.1) \.0)
+
     //check token == t
     public boolean next(TokenType t) {
         if (token == t) return true;
@@ -116,10 +116,4 @@ public class Lexer {
         }
         System.out.println("EOF");
     }
-
-    public static void main(String[] args) {
-        Lexer lexer = new Lexer("((\\n.\\f.\\x.f (n f x))(\\f.\\x.x))");
-        lexer.translate();
-    }
-//((\n.\f.\x.f (n f x))(\f.\x.x))
 }
