@@ -1,10 +1,9 @@
 package cn.seecoder;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.List;
+import java.util.Map;
 
 
 public class printTree {
@@ -18,7 +17,7 @@ public class printTree {
     }
 
     public void print(){
-        System.out.println(ast.totree());
+        System.out.println("["+ast.totree()+"]");
     }
 
     public static String sendGet(String url, String param) {
@@ -76,6 +75,7 @@ public class printTree {
         PrintWriter out = null;
         BufferedReader in = null;
         String result = "";
+        String filePath = "E:\\graph.php";
         try {
             URL realUrl = new URL(url);
             // 打开和URL之间的连接
@@ -93,13 +93,25 @@ public class printTree {
             //out=new OutputStreamWriter(conn.getOutputStream(),"UTF-8")
             // 发送请求参数
             out.print(param);
+            URL fileUrl = new URL("http://ironcreek.net/phpsyntaxtree/dnlgraph.php?");
+            DataInputStream dataInputStream = new DataInputStream(fileUrl.openStream());
+            FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath));
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int length;
+            while((length=dataInputStream.read(buffer))>0){
+                output.write(buffer,0,length);
+            }
+            fileOutputStream.write(output.toByteArray());
+            dataInputStream.close();
+            fileOutputStream.close();
             // flush输出流的缓冲
             out.flush();
             // 定义BufferedReader输入流来读取URL的响应
             in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             String line;
             while ((line = in.readLine()) != null) {
-                result += line;
+                result += line+"\n";
             }
         } catch (Exception e) {
             System.out.println("发送 POST 请求出现异常！"+e);
@@ -123,5 +135,8 @@ public class printTree {
         return result;
     }
 
+    public static void main(String[] args) {
+        sendPost("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
+    }
 
 }

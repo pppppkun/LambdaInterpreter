@@ -214,11 +214,15 @@ public class Interpreter {
 
             Parser parser = new Parser(lexer);
 
-            Interpreter interpreter = new Interpreter(parser);
+            printTree p = new printTree(parser);
 
-            AST result = interpreter.eval();
+            p.print();
 
-            System.out.println(i + ":" + result.toString());
+//            Interpreter interpreter = new Interpreter(parser);
+//
+//            AST result = interpreter.eval();
+//
+//            System.out.println(i + ":" + result.toString());
 
         }
 
