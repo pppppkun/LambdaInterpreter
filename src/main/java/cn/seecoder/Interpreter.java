@@ -2,7 +2,9 @@ package cn.seecoder;
 
 public class Interpreter {
     Parser parser;
-    public AST astAfterParser;
+    private AST astAfterParser;
+    private AST result;
+    protected StringBuilder builder = new StringBuilder();
 
     public Interpreter(Parser p) {
         parser = p;
@@ -10,6 +12,16 @@ public class Interpreter {
         //System.out.println("After parser:"+astAfterParser.toString());
     }
 
+    public Interpreter(String lambda){
+        Lexer lexer = new Lexer(lambda);
+        parser = new Parser(lexer);
+        astAfterParser = parser.parse();
+        result = this.eval();
+    }
+
+    public AST getResult() {
+        return result;
+    }
 
     private final boolean isAbstraction(AST ast) {
         return ast instanceof Abstraction;
@@ -90,7 +102,10 @@ public class Interpreter {
             return new Abstraction(((Abstraction) node).param,subst(((Abstraction) node).body,value,depth+1));
         }
         else{
-            if(depth==((Identifier)node).getDBindex()) return shift(depth,value,0);
+            if(depth==((Identifier)node).getDBindex()) {
+                builder.append("subst: "+"from "+node.toShow()+" to "+value.toShow()+"\n");
+                return shift(depth,value,0);
+            }
             else return node;
         }
     }
@@ -125,7 +140,9 @@ public class Interpreter {
             //param 1 = node.name
             //param 2 = String.valueOf(node.getDBindex()+node.getDEindex()>= from ? by:0)
             //我是一个伪文艺的Java8青年!
-            return new Identifier(((Identifier) node).name, String.valueOf(((Identifier) node).getDBindex() + (((Identifier) node).getDBindex() >= from ? by : 0)));
+            Identifier identifier = new Identifier(((Identifier) node).name, String.valueOf(((Identifier) node).getDBindex() + (((Identifier) node).getDBindex() >= from ? by : 0)));
+            builder.append("shift: "+"lambda: "+node.toShow()+"De Bruijn: "+node.toString()+"to"+identifier.toString()+"\n");
+            return identifier;
         }
     }
 
@@ -210,23 +227,23 @@ public class Interpreter {
 
             System.out.println(i + ":" + source);
 
-            Lexer lexer = new Lexer(source);
+//            Lexer lexer = new Lexer(source);
 
-            Parser parser = new Parser(lexer);
-
-            printTree p = new printTree(parser);
-
-            p.print();
-
+//            Parser parser = new Parser(lexer);
+//
 //            Interpreter interpreter = new Interpreter(parser);
 //
 //            AST result = interpreter.eval();
-//
-//            System.out.println(i + ":" + result.toString());
+
+            Interpreter interpreter = new Interpreter(source);
+
+            AST result = interpreter.result;
+
+            System.out.println(i + ":" + result.toShow());
 
         }
 
     }
 }
 //[[[n][[f][[x][fnfx]]]][[f][[x][x]]]]
-//((n\f.\x.f (n f x))(\f.\x.x))
+//((\n.\f.\x.f (n f x))(\f.\x.x))

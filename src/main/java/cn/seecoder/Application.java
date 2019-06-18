@@ -33,6 +33,8 @@ public class Application extends AST{
         return "("+lhs.toString()+" "+rhs.toString()+")";
     }
 
+    public String toShow(){return "("+lhs.toShow()+" "+rhs.toShow()+")";}
+
     public String totree(){
         return "["+lhs.totree()+"]["+rhs.totree()+"]";
     }

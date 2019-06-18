@@ -13,6 +13,10 @@ public class Abstraction extends AST {
         return "\\."+body.toString();
     }
 
+    public String toShow(){
+        return "\\"+param.toShow()+"."+body.toShow();
+    }
+
     public String totree(){
         return "["+param.totree()+"]"+"["+body.totree()+"]";
     }

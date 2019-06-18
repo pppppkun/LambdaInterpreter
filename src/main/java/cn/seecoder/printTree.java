@@ -68,14 +68,14 @@ public class printTree {
     /**
      * 向指定 URL 发送POST方法的请求
      * @param url 发送请求的 URL
-     * @param param 请求参数，请求参数应该是 name1=value1&name2=value2 的形式。
+     * @param param 请求参数
      * @return 所代表远程资源的响应结果
      */
     public static String sendPost(String url, String param) {
         PrintWriter out = null;
         BufferedReader in = null;
         String result = "";
-        String filePath = "E:\\graph.php";
+        String filePath = "E:\\";
         try {
             URL realUrl = new URL(url);
             // 打开和URL之间的连接
@@ -93,18 +93,6 @@ public class printTree {
             //out=new OutputStreamWriter(conn.getOutputStream(),"UTF-8")
             // 发送请求参数
             out.print(param);
-            URL fileUrl = new URL("http://ironcreek.net/phpsyntaxtree/dnlgraph.php?");
-            DataInputStream dataInputStream = new DataInputStream(fileUrl.openStream());
-            FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath));
-            ByteArrayOutputStream output = new ByteArrayOutputStream();
-            byte[] buffer = new byte[1024];
-            int length;
-            while((length=dataInputStream.read(buffer))>0){
-                output.write(buffer,0,length);
-            }
-            fileOutputStream.write(output.toByteArray());
-            dataInputStream.close();
-            fileOutputStream.close();
             // flush输出流的缓冲
             out.flush();
             // 定义BufferedReader输入流来读取URL的响应
@@ -136,6 +124,7 @@ public class printTree {
     }
 
     public static void main(String[] args) {
+//        sendGet("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
         sendPost("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
     }
 

@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 
 public class Lexer {
 
+    public StringBuilder builder = new StringBuilder();
     public String source;
     public int index;
     public TokenType token;
@@ -61,6 +62,7 @@ public class Lexer {
         if (index == sources.length&&flag){
             flag = false;
             System.out.println(TokenType.EOF);
+            builder.append("EOF\n");
             return TokenType.EOF;
         }
         else if(flag==false) return null;
@@ -81,7 +83,10 @@ public class Lexer {
             LCID = temp.toString();
         }
         index++;
-        if(token != null) System.out.println(token);
+        if(token != null) {
+            System.out.println(token);
+            builder.append(token.toString()+"\n");
+        }
         return token;
     }
 
