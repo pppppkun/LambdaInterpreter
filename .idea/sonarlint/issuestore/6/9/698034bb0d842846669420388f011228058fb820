@@ -1,3 +1,3 @@
 
-isquid:S00117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý÷ªˆ
-osquid:S00116"RRename this field "DBindex" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¸ñ…ùÿÿÿÿ
+vsquid:S00116"RRename this field "DBindex" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¸ñ…ùÿÿÿÿ8ëÿ‘Ó¶-
+psquid:S00117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý÷ªˆ8ëÿ‘Ó¶-

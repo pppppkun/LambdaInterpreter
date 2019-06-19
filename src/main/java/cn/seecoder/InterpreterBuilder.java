@@ -14,24 +14,27 @@ public class InterpreterBuilder {
     private JTextArea process;
     protected String lambda;
     private Interpreter interpreter;
-    protected String result;
+    protected AST result;
     private JFrame frame;
 
     public void go(){
-        frame = new JFrame("LambdaInterpreter @pkun");
+        frame = new JFrame("LambdaInterpreter ©pkun");
         JPanel mainPanel = new JPanel();
-
+        //question
         question = new JTextArea(3,20);
         question.setLineWrap(true);
         question.setWrapStyleWord(true);
-
+        //answer
         answer = new JTextArea(3,20);
         answer.setLineWrap(true);
         answer.setWrapStyleWord(true);
-
+        answer.setEditable(false);
+        //process
         process = new JTextArea(20,50);
         process.setLineWrap(true);
         process.setWrapStyleWord(true);
+        process.setEditable(false);
+        //scrollpane to process
         JScrollPane pScroller = new JScrollPane(process);
         pScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         pScroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -47,12 +50,13 @@ public class InterpreterBuilder {
         mainPanel.add(aLabel);
         mainPanel.add(answer);
         mainPanel.add(interpreter);
+        mainPanel.add(pLabel);
         mainPanel.add(pScroller);
 
         interpreter.addActionListener(new InterpreterListener());
 
         frame.getContentPane().add(BorderLayout.CENTER,mainPanel);
-        frame.setSize(750,500);
+        frame.setSize(730,500);
         frame.setVisible(true);
     }
 
@@ -64,14 +68,14 @@ public class InterpreterBuilder {
             Parser parser = new Parser(lexer);
             AST p = parser.parse();
             interpreter = new Interpreter(lambda);
-            result = interpreter.getResult().toShow();
-            answer.setText(result);
+            result = interpreter.getResult();
+            answer.setText(result.toShow()+"\n"+result.toString());
             StringBuilder builder = new StringBuilder();
             builder.append(lambda+"\n");
             builder.append(lexer.builder.toString()+"\n");
             builder.append("Before interpreter De Bruijn: "+p.toString()+"\n");
-            builder.append(interpreter.builder.toString());
-            process.setText(builder.toString());
+            builder.append(interpreter.getBuilder().toString());
+            process.setText(builder.toString()+"\n"+result.toString()+"\n");
         }
     }
 

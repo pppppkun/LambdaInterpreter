@@ -123,9 +123,9 @@ public class printTree {
         return result;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        sendGet("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
-        sendPost("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
-    }
+//        sendPost("http://ironcreek.net/phpsyntaxtree/","data=[[[f]][[[x]][[x]]]]");
+//    }
 
 }

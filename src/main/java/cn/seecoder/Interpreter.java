@@ -4,7 +4,7 @@ public class Interpreter {
     Parser parser;
     private AST astAfterParser;
     private AST result;
-    protected StringBuilder builder = new StringBuilder();
+    private StringBuilder builder = new StringBuilder();
 
     public Interpreter(Parser p) {
         parser = p;
@@ -17,6 +17,10 @@ public class Interpreter {
         parser = new Parser(lexer);
         astAfterParser = parser.parse();
         result = this.eval();
+    }
+
+    public StringBuilder getBuilder() {
+        return builder;
     }
 
     public AST getResult() {
@@ -42,8 +46,12 @@ public class Interpreter {
 
     private AST evalAST(AST ast) {
         while(true){
+            builder.append("now is eval: "+ast.toShow()+"\n");
             if(ast instanceof Application){
                 if(isAbstraction(((Application) ast).getLhs())){
+                    builder.append("now is substitute   "+"node: "+
+                            ((Abstraction)((Application) ast).getLhs()).toShow()+
+                            "    value: "+((Application) ast).getRhs().toShow()+"\n");
                     ast = substitute(((Abstraction)((Application) ast).getLhs()).body,((Application) ast).getRhs());
                 }
                 else if(isApplication(((Application) ast).getLhs())&&!isIdentifier(((Application) ast).getRhs())){
@@ -74,10 +82,7 @@ public class Interpreter {
     }
 
     private AST substitute(AST node, AST value) {
-
         return shift(-1, subst(node, shift(1, value, 0), 0), 0);
-
-
     }
 
     /**
@@ -103,7 +108,7 @@ public class Interpreter {
         }
         else{
             if(depth==((Identifier)node).getDBindex()) {
-                builder.append("subst: "+"from "+node.toShow()+" to "+value.toShow()+"\n");
+                builder.append("subst: "+"from "+node.toShow()+" ("+node.toString()+") "+" to "+value.toShow()+"\n");
                 return shift(depth,value,0);
             }
             else return node;
@@ -126,6 +131,7 @@ public class Interpreter {
      */
 
     private AST shift(int by, AST node, int from){
+        builder.append("now is shift: "+node.toShow()+"\n");
         if(isApplication(node)){
             //param1 = shift(by,node.lhs,from)
             //param2 = shift(by,node.rhs,from)
@@ -140,9 +146,12 @@ public class Interpreter {
             //param 1 = node.name
             //param 2 = String.valueOf(node.getDBindex()+node.getDEindex()>= from ? by:0)
             //我是一个伪文艺的Java8青年!
+            System.out.println(node.toShow());
+            if((((Identifier) node).getDBindex() >= from)) System.out.println("Using");
             Identifier identifier = new Identifier(((Identifier) node).name, String.valueOf(((Identifier) node).getDBindex() + (((Identifier) node).getDBindex() >= from ? by : 0)));
-            builder.append("shift: "+"lambda: "+node.toShow()+"De Bruijn: "+node.toString()+"to"+identifier.toString()+"\n");
+            builder.append("shift(by: "+by+" from: "+from+"): "+"lambda: "+node.toShow()+" De Bruijn: "+node.toString()+" to "+identifier.toString()+"\n");
             return identifier;
+
         }
     }
 
@@ -218,6 +227,7 @@ public class Interpreter {
                 app(MAX, FOUR, TWO),//29
                 app(MIN, ONE, TWO),//30
                 app(MIN, FOUR, TWO),//31
+                app(POW,TWO,THREE),//32
         };
 
         for (int i = 0; i < sources.length; i++) {
@@ -227,19 +237,15 @@ public class Interpreter {
 
             System.out.println(i + ":" + source);
 
-//            Lexer lexer = new Lexer(source);
+            Lexer lexer = new Lexer(source);
 
-//            Parser parser = new Parser(lexer);
-//
-//            Interpreter interpreter = new Interpreter(parser);
-//
-//            AST result = interpreter.eval();
+            Parser parser = new Parser(lexer);
 
-            Interpreter interpreter = new Interpreter(source);
+            Interpreter interpreter = new Interpreter(parser);
 
-            AST result = interpreter.result;
+            AST result = interpreter.eval();
 
-            System.out.println(i + ":" + result.toShow());
+            System.out.println(i + ":" + result.toString());
 
         }
 
@@ -247,3 +253,4 @@ public class Interpreter {
 }
 //[[[n][[f][[x][fnfx]]]][[f][[x][x]]]]
 //((\n.\f.\x.f (n f x))(\f.\x.x))
+//(((\b.\e.e b)((\n.\f.\x.f (n f x))((\n.\f.\x.f (n f x))(\f.\x.x))))((\n.\f.\x.f (n f x))((\n.\f.\x.f (n f x))((\n.\f.\x.f (n f x))(\f.\x.x)))))
