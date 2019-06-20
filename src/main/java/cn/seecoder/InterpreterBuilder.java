@@ -12,11 +12,13 @@ public class InterpreterBuilder {
     private JTextArea question;
     private JTextArea answer;
     private JTextArea process;
+    private JFrame frame;
+    private Font font = new Font("Source Code Variable Medium",0,15);
     protected String lambda;
     private Interpreter interpreter;
     protected AST result;
-    private JFrame frame;
 
+    //create GUI
     public void go(){
         frame = new JFrame("LambdaInterpreter ©pkun");
         JPanel mainPanel = new JPanel();
@@ -24,16 +26,19 @@ public class InterpreterBuilder {
         question = new JTextArea(3,20);
         question.setLineWrap(true);
         question.setWrapStyleWord(true);
+        question.setFont(font);
         //answer
         answer = new JTextArea(3,20);
         answer.setLineWrap(true);
         answer.setWrapStyleWord(true);
         answer.setEditable(false);
+        answer.setFont(font);
         //process
         process = new JTextArea(20,50);
         process.setLineWrap(true);
         process.setWrapStyleWord(true);
         process.setEditable(false);
+        process.setFont(font);
         //scrollpane to process
         JScrollPane pScroller = new JScrollPane(process);
         pScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -56,11 +61,13 @@ public class InterpreterBuilder {
         interpreter.addActionListener(new InterpreterListener());
 
         frame.getContentPane().add(BorderLayout.CENTER,mainPanel);
-        frame.setSize(730,500);
+        frame.setSize(780,500);
         frame.setVisible(true);
     }
 
-
+    /**
+     * inner class that create process text
+     */
     public class InterpreterListener implements ActionListener{
         public void actionPerformed(ActionEvent ev){
             lambda = question.getText();

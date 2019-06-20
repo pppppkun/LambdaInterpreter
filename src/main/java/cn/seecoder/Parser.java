@@ -66,8 +66,8 @@ public class Parser {
 
     private AST atom(ArrayList<String> ctx) {
         if (lexer.match(TokenType.LPAREN)) {
-            AST Pterm = term(ctx);
-            if(lexer.match(TokenType.RPAREN))return Pterm;
+            AST Term = term(ctx);
+            if(lexer.match(TokenType.RPAREN))return Term;
         }
         else if (lexer.next(TokenType.LCID)) {
             String tvalue = lexer.tokenvalue;

@@ -25,3 +25,7 @@ U
 %src/main/java/cn/seecoder/Parser.java,c\0\c06b1dc22ec7ec1d4738484395ac11d923e8552c
 R
 "src/main/java/META-INF/MANIFEST.MF,6\3\63ef5783cbf71fdf39c1fd6ae6873fd812259930
+X
+(src/main/java/cn/seecoder/TokenType.java,c\d\cde582917134468682c1e2ce3e38b84179a795a2
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

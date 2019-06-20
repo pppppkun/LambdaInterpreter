@@ -4,7 +4,7 @@ public class Interpreter {
     Parser parser;
     private AST astAfterParser;
     private AST result;
-    private StringBuilder builder = new StringBuilder();
+    private StringBuilder builder = new StringBuilder();//ctx which use to mark different type.
 
     public Interpreter(Parser p) {
         parser = p;
@@ -49,9 +49,11 @@ public class Interpreter {
             builder.append("now is eval: "+ast.toShow()+"\n");
             if(ast instanceof Application){
                 if(isAbstraction(((Application) ast).getLhs())){
+
                     builder.append("now is substitute   "+"node: "+
                             ((Abstraction)((Application) ast).getLhs()).toShow()+
                             "    value: "+((Application) ast).getRhs().toShow()+"\n");
+
                     ast = substitute(((Abstraction)((Application) ast).getLhs()).body,((Application) ast).getRhs());
                 }
                 else if(isApplication(((Application) ast).getLhs())&&!isIdentifier(((Application) ast).getRhs())){
@@ -146,8 +148,8 @@ public class Interpreter {
             //param 1 = node.name
             //param 2 = String.valueOf(node.getDBindex()+node.getDEindex()>= from ? by:0)
             //我是一个伪文艺的Java8青年!
-            System.out.println(node.toShow());
-            if((((Identifier) node).getDBindex() >= from)) System.out.println("Using");
+//            System.out.println(node.toShow());
+//            if((((Identifier) node).getDBindex() >= from)) System.out.println("Using");
             Identifier identifier = new Identifier(((Identifier) node).name, String.valueOf(((Identifier) node).getDBindex() + (((Identifier) node).getDBindex() >= from ? by : 0)));
             builder.append("shift(by: "+by+" from: "+from+"): "+"lambda: "+node.toShow()+" De Bruijn: "+node.toString()+" to "+identifier.toString()+"\n");
             return identifier;

@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5aa009d-7278-4f19-b077-d7b25fb3cd15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LambdaInterpreter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LambdaInterpreter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/698034bb0d842846669420388f011228058fb820" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/698034bb0d842846669420388f011228058fb820" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/seecoder/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/seecoder/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/seecoder/printTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/seecoder/printTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/seecoder/Interpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/seecoder/Interpreter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/seecoder/printTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/seecoder/printTree.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,35 +28,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#522#523#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Abstraction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Identifier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -73,29 +41,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
+            <state relative-caret-position="-72">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="method#go#0;class#InterpreterBuilder#0" />
+                <element signature="docComment;class#InterpreterListener#0;class#InterpreterBuilder#0" />
+                <element signature="class#InterpreterListener#0;class#InterpreterBuilder#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+            <state relative-caret-position="222">
+              <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
               <folding>
                 <element signature="e#273#274#0" expanded="true" />
                 <element signature="e#298#299#0" expanded="true" />
@@ -107,22 +76,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cn/seecoder/InterpreterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+            <state relative-caret-position="516">
+              <caret line="2012" column="16" selection-start-line="2012" selection-start-column="16" selection-end-line="2012" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Interpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+            <state relative-caret-position="609">
+              <caret line="256" column="2" lean-forward="true" selection-start-line="256" selection-start-column="2" selection-end-line="256" selection-end-column="33" />
               <folding>
                 <element signature="method#Interpreter#0;class#Interpreter#0" />
                 <element signature="method#Interpreter#1;class#Interpreter#0" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
                 <element signature="method#eval#0;class#Interpreter#0" />
                 <element signature="method#evalAST#0;class#Interpreter#0" />
                 <element signature="docComment;method#subst#0;class#Interpreter#0" />
@@ -136,10 +103,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-110">
+                <caret line="129" column="9" lean-forward="true" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/printTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2541">
               <caret line="129" selection-start-line="129" selection-end-line="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/TokenType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -162,8 +150,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/cn/seecoder/printTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/seecoder/Interpreter.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java" />
       </list>
     </option>
@@ -179,19 +168,17 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="81" />
+    <option name="y" value="41" />
+    <option name="width" value="1620" />
+    <option name="height" value="954" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,6 +245,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,8 +320,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.InterpreterBuilder" />
-        <item itemvalue="Application.Interpreter" />
         <item itemvalue="JUnit.InterpreterTest" />
+        <item itemvalue="Application.Interpreter" />
       </list>
     </recent_temporary>
   </component>
@@ -353,7 +342,8 @@
       <workItem from="1560865091572" duration="362000" />
       <workItem from="1560867424006" duration="27000" />
       <workItem from="1560915343013" duration="4677000" />
-      <workItem from="1560925632274" duration="822000" />
+      <workItem from="1560925632274" duration="3106000" />
+      <workItem from="1560994087750" duration="748000" />
     </task>
     <servers />
   </component>
@@ -364,15 +354,29 @@
     <history-entry file="InterpreterTest - 2019.06.18 at 21h 07m 27s.xml">
       <configuration name="InterpreterTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="InterpreterTest - 2019.06.19 at 22h 01m 51s.xml">
+      <configuration name="InterpreterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InterpreterTest - 2019.06.19 at 22h 02m 02s.xml">
+      <configuration name="InterpreterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InterpreterTest - 2019.06.20 at 09h 34m 07s.xml">
+      <configuration name="InterpreterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InterpreterTest - 2019.06.20 at 09h 36m 37s.xml">
+      <configuration name="InterpreterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InterpreterTest - 2019.06.20 at 09h 38m 54s.xml">
+      <configuration name="InterpreterTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8175000" />
+    <option name="totallyTimeSpent" value="11207000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1040" extended-state="6" />
-    <editor active="true" />
+    <frame x="81" y="41" width="1620" height="954" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19722815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17115384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -381,7 +385,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289183" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36341465" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955848" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,9 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -461,6 +462,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Identifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -473,30 +481,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
-          <folding>
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/seecoder/InterpreterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/printTree.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -512,15 +498,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/seecoder/InterpreterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="2012" column="16" selection-start-line="2012" selection-start-column="16" selection-end-line="2012" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-110">
+            <caret line="129" column="9" lean-forward="true" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="method#go#0;class#InterpreterBuilder#0" />
+            <element signature="docComment;class#InterpreterListener#0;class#InterpreterBuilder#0" />
+            <element signature="class#InterpreterListener#0;class#InterpreterBuilder#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/Interpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="254" column="33" lean-forward="true" selection-start-line="254" selection-start-column="33" selection-end-line="254" selection-end-column="33" />
+        <state relative-caret-position="609">
+          <caret line="256" column="2" lean-forward="true" selection-start-line="256" selection-start-column="2" selection-end-line="256" selection-end-column="33" />
           <folding>
             <element signature="method#Interpreter#0;class#Interpreter#0" />
             <element signature="method#Interpreter#1;class#Interpreter#0" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
             <element signature="method#eval#0;class#Interpreter#0" />
             <element signature="method#evalAST#0;class#Interpreter#0" />
             <element signature="docComment;method#subst#0;class#Interpreter#0" />
@@ -529,13 +560,6 @@
             <element signature="method#shift#0;class#Interpreter#0" />
             <element signature="method#main#0;class#Interpreter#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/seecoder/InterpreterBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
         </state>
       </provider>
     </entry>
