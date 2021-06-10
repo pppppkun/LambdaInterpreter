@@ -79,7 +79,7 @@ x       # Identifier
 value 是最终的形式，也就是说，它们不能再被求值了。在这个例子中，唯一的既是 term 又是 value 的是 abstraction（不能对函数求值，除非它被调用）。
 
 实际的求值规则如下：
-
+ 
 1)       t1 -> t1'
 
     t1 t2 -> t1' t2
