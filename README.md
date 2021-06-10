@@ -20,7 +20,7 @@ LAMBDA: '\' // 为了方便使用 “\”
 DOT: '.'
 LCID: /[a-z][a-zA-Z]*/ 
 ```
-### Lexer
+### Lexer 
 
 处理 token 的辅助方法：(可以自行定义)
 + next(Token): 返回下一个 token 是否匹配 Token
